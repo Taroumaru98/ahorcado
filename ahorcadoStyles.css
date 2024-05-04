@@ -1,0 +1,245 @@
+/* Estilos generales */
+body {
+    display: flex;
+    background-image: url(./img/Chismografo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.todo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    height: 100vh;
+    margin: 0px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilos para la flecha de retroceso */
+#atras {
+    background-color: #ca508f;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 5px;
+    border-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 0px 0px #000;
+    animation: blink 1.5s infinite;
+}
+
+#atras:hover {
+    background-color: #ff3399;
+    transform: scale(1.1);
+    animation: none;
+}
+
+.flecha {
+    padding-top: 7px;
+    padding-left: 0px;
+    width: 28px;
+    height: 28px;
+    z-index: 1000;
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos para la categoría activa */
+.cat a.active {
+    color: red; /* Color rojo para indicar la categoría activa */
+}
+
+/* Estilos para las categorías */
+.categorias {
+    width: 350px;
+    height: 100vh;
+    background-color: rgba(174, 156, 191, 0.507);
+    padding-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+#palabra2 {
+    color: #ca508f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding-top: 35px;
+    padding-bottom: 20px;
+    display: inline-block;
+    animation: bounce 1s infinite alternate;
+    font-size: 30px;
+}
+
+.cat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.cat button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-size: cover;
+    color: rgb(255, 125, 162);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    opacity: 1.0;
+    -webkit-text-stroke: 0.7px black;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.cat button:hover {
+    opacity: 0.8;
+}
+
+/* Estilos para las imágenes de las categorías */
+#btnAnimales {
+    background-image: url('./img/animales.jpg');
+    opacity: 0.8;
+}
+
+#btnColores {
+    background-image: url('./img/Rainbow\ Pixelart\ Colorful\ Checker\ Pattern.jpg');
+    opacity: 0.8;
+}
+
+#btnPaises {
+    background-image: url('./img/PAISES.jpg');
+    opacity: 0.8;
+}
+
+/* Estilos para el juego de ahorcado */
+.ahorcado {
+    display: none; /* Ocultar el contenedor del juego al principio */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(174, 156, 191, 0.507);
+    z-index: 1000;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mostrar-ahorcado .ahorcado {
+    display: flex;
+}
+
+.ahorcado h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.ahorcado #wordContainer {
+    margin-bottom: 20px;
+}
+
+.ahorcado #wordContainer h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.ahorcado #word {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.ahorcado #Cont-personaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ahorcado #personaje img {
+    width: 80px;
+    height: 80px;
+    margin: 0 5px;
+}
+
+.ahorcado #Cont-teclado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.ahorcado .tecla-row {
+    display: flex;
+    gap: 5px;
+}
+
+.ahorcado .key {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ahorcado .key:hover {
+    background-color: #e0e0e0;
+}
+
+.ahorcado #intentos {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHORCADO</title>
+    <link rel="stylesheet" href="./ahorcadoStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <a href="./index.html">
+        <div id="atras"><img class="flecha" src="./img/flecha-curva.png"></div>
+    </a>
+</head>
+
+<body>
+    <div class="todo">
+        <div class="contendor">
+            <audio id="musicaFondo" autoplay loop>
+                <source src="./img/juego.mp3" type="audio/mpeg">
+            </audio>
+
+            <div class="categorias">
+                <h1 id="palabra2">CATEGORIAS</h1>
+                <div class="cat">
+                    <button id="btnAnimales" onclick="activarCategoria('animales')">ANIMALES</button>
+                    <button id="btnColores" onclick="activarCategoria('colores')">COLORES</button>
+                    <button id="btnPaises" onclick="activarCategoria('paises')">PAISES</button>
+                </div>
+            </div>
+
+
+            <div class="ahorcado">
+                <h1 id="palabra">AHORCADO</h1>
+                <div id="wordContainer">
+                    <h2>Palabra:</h2>
+                    <div id="word"></div>
+                </div>
+                <div id="Cont-personaje">
+                    <div id="personaje">
+                        <img id="ahorcado1" src="./links/ahorcado_1.png" alt="ahorcado1">
+                        <img id="ahorcado2" src="./links/ahorcado_2.png" alt="ahorcado2">
+                        <img id="ahorcado3" src="./links/ahorcado_3.png" alt="ahorcado3">
+                        <img id="ahorcado4" src="./links/ahorcado_4.png" alt="ahorcado4">
+                        <img id="ahorcado5" src="./links/ahorcado_5.png" alt="ahorcado5">
+                        <img id="ahorcado6" src="./links/ahorcado_6.png" alt="ahorcado6">
+                        <img id="ahorcado7" src="./links/ahorcado_7.png" alt="ahorcado7">
+                    </div>
+                </div>
+                <div id="Cont-teclado">
+                    <div class="tecla-row">
+                        <button class="key" onclick="guessLetter('a')">A</button>
+                        <button class="key" onclick="guessLetter('b')">B</button>
+                        <button class="key" onclick="guessLetter('c')">C</button>
+                        <button class="key" onclick="guessLetter('d')">D</button>
+                        <button class="key" onclick="guessLetter('e')">E</button>
+                        <button class="key" onclick="guessLetter('f')">F</button>
+                        <button class="key" onclick="guessLetter('g')">G</button>
+                        <button class="key" onclick="guessLetter('h')">H</button>
+                        <button class="key" onclick="guessLetter('i')">I</button>
+                        <button class="key" onclick="guessLetter('j')">J</button>
+                        <button class="key" onclick="guessLetter('k')">K</button>
+                        <button class="key" onclick="guessLetter('l')">L</button>
+                        <button class="key" onclick="guessLetter('m')">M</button>
+                        <button class="key" onclick="guessLetter('n')">N</button>
+                        <button class="key" onclick="guessLetter('ñ')">Ñ</button>
+                        <button class="key" onclick="guessLetter('o')">O</button>
+                        <button class="key" onclick="guessLetter('p')">P</button>
+                        <button class="key" onclick="guessLetter('q')">Q</button>
+                        <button class="key" onclick="guessLetter('r')">R</button>
+                        <button class="key" onclick="guessLetter('s')">S</button>
+                        <button class="key" onclick="guessLetter('t')">T</button>
+                        <button class="key" onclick="guessLetter('u')">U</button>
+                        <button class="key" onclick="guessLetter('v')">V</button>
+                        <button class="key" onclick="guessLetter('w')">W</button>
+                        <button class="key" onclick="guessLetter('x')">X</button>
+                        <button class="key" onclick="guessLetter('y')">Y</button>
+                        <button class="key" onclick="guessLetter('z')">Z</button>
+                    </div>
+                </div>
+                <div id="intentos">Intentos restantes: <span id="intentosContador"></span></div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
+
