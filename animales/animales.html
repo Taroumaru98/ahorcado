@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>AHORCADO</title>
+    <style>
+        body {
+            font-family: 'Press Start 2P', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #contenedor-ahorcado {
+            position: relative;
+            width: 150px;
+            height: auto;
+        }
+        #imagen-palo {
+            width: 100%;
+            height: auto;
+            margin-left: -35%;
+        }
+        #imagen-ahorcado {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            display: none; /* Oculto inicialmente */
+        }
+        #seccion-entrada-usuario, #contenedor-letras, #contenedor-nuevo-juego, #texto-resultado {
+            margin: 20px;
+        }
+        .hide { display: none; }
+        .win-msg { color: green; }
+        .lose-msg { color: red; }
+        button {
+            font-family: 'Press Start 2P', cursive;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor-ahorcado">
+        <img id="imagen-palo" src="../links/palo.png" alt="Palo del Ahorcado">
+        <img id="imagen-ahorcado" src="../links/ahorcado_0.png" alt="Ahorcado">
+    </div>
+    <div id="seccion-entrada-usuario"></div>
+    <div id="contenedor-letras" class="hide"></div>
+    <div id="contenedor-nuevo-juego" class="hide">
+        <button id="boton-nuevo-juego">Nuevo Juego</button>
+    </div>
+    <div id="texto-resultado"></div>
+    <script src="./animales.js"></script>
+</body>
+</html>

@@ -38,13 +38,14 @@ audio {
 }
 
 #T{
+    font-size: 5vw; /* Ajusta el tamaño de la fuente a 5% del ancho de la pantalla */
     text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+        -0.2vw -0.2vw 0 #000,  
+         0.2vw -0.2vw 0 #000,
+        -0.2vw  0.2vw 0 #000,
+         0.2vw  0.2vw 0 #000;
     animation: bounce 1s infinite alternate;
-    -webkit-text-stroke: 0.5px black;
+    -webkit-text-stroke: 0.05vw black; /* Ajusta el grosor del contorno */
 }
 
 @keyframes bounce {

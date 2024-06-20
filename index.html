@@ -7,7 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="./links/icon.png" type="image/png">
     <title>AHORCADO</title>
+        <style>
+        a {
+            text-decoration: none;
+            color: inherit; 
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:active {
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
     <div class="contenedor">
@@ -23,9 +44,9 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h3>Selecciona la dificultad:</h3>
-            <button id="facil">Fácil</button>
-            <button id="medio">Medio</button>
-            <button id="dificil">Difícil</button>
+            <button id="facil"><a href="./categoriasFacil.html">Facil</a></button>
+            <button id="medio"><a href="./categoriasMedio.html">Medio</a></button>
+            <button id="dificil"><a href="./categoriasDificil.html">Dificil</a></button>
           </div>
     </div>
     <script src="./script.js"></script>

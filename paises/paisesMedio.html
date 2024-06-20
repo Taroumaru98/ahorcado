@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="../links/icon.png" type="image/png">
+    <title>Ahorcado - Paises Medio</title>
+        <style type="text/css">
+    body {
+    background-image: url(../links/medio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <div class="todo">
+    <div id="contenedor-ahorcado">
+        <img id="imagen-palo" src="../links/palo.png" alt="Palo">
+        <img id="imagen-ahorcado" src="../links/ahorcado_1.png" alt="Ahorcado">
+    </div>
+    <div id="seccion-entrada-usuario"></div>
+    <button id="boton-pista">Pista</button>
+    <div id="pista" class="hide"></div>
+    <div id="contenedor-letras"></div>
+    <div id="contenedor-nuevo-juego" class="hide">
+        <button id="boton-nuevo-juego">Nuevo Juego</button>
+    </div>
+    <div id="texto-resultado"></div>
+    <div id="cronometro">Tiempo restante: <span id="tiempo-restante">45</span> segundos</div>
+    <div class="contenedor-botones">
+        <a id="boton-anterior" class="boton-ubicacion" href="../categoriasMedio.html">
+            <img src="../links/back.png" alt="Categorías" class="icono"></a>
+        <a id="boton-index" class="boton-ubicacion" href="../index.html">
+            <img src="../links/home.png" alt="Índice" class="icono"></a>
+    </div>
+</div>
+    <script src="./paisesMedio.js"></script>
+</body>
+</html>
